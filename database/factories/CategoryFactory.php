@@ -9,13 +9,6 @@ use Illuminate\Support\Str;
 class CategoryFactory extends Factory
 {
     /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = Category::class;
-
-    /**
      * Define the model's default state.
      *
      * @return array
