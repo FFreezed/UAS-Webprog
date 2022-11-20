@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => ['guest']], function () {
+Route::middleware('guest')->group(function () {
     Route::get('login', [LoginController::class, 'index'])->name('login');
     Route::post('login', [LoginController::class, 'login']);
     Route::get('register', [RegisterController::class, 'index'])->name('register');
@@ -40,7 +40,7 @@ Route::group(['middleware' => ['guest']], function () {
     Route::post('forgot-password', [ForgotPasswordController::class, 'reset']);
 });
 
-Route::group(['middleware' => ['auth']], function () {
+Route::middleware('auth')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('logout', [LogoutController::class, 'index'])->name('logout');
 
