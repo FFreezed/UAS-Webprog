@@ -112,7 +112,7 @@ return [
     'remove_abandoned_settings' => false,
 
     // Controller to show and handle save setting
-    'controller' => '\App\Http\Controllers\SettingController',
+    'controller' => \App\Http\Controllers\SettingController::class,
 
     // settings group
     'setting_group' => function () {
