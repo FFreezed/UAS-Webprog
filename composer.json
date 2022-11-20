@@ -18,7 +18,8 @@
         "pusher/pusher-php-server": "^7.0",
         "qcod/laravel-app-settings": "^1.4",
         "spatie/laravel-backup": "^6.16",
-        "spatie/laravel-permission": "^4.2"
+        "spatie/laravel-permission": "^4.2",
+        "league/flysystem-aws-s3-v3": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
