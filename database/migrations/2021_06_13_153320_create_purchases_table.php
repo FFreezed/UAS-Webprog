@@ -16,8 +16,8 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->foreignId('category_id')->nullable()->constrained()->onDelete("cascade");
-            $table->foreignId('supplier_id')->nullable()->constrained()->onDelete("cascade");
+            $table->foreignId('category_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('supplier_id')->nullable()->constrained()->onDelete('cascade');
             $table->string('price');
             $table->string('quantity');
             $table->date('expiry_date');

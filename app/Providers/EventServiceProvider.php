@@ -18,10 +18,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-        'App\Events\PurchaseOutStock'=>[
+        'App\Events\PurchaseOutStock' => [
             'App\Listeners\NotifyStockAlert',
         ],
-        
+
     ];
 
     /**

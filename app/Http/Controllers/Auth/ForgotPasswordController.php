@@ -7,16 +7,19 @@ use Illuminate\Http\Request;
 
 class ForgotPasswordController extends Controller
 {
-    public function index(){
-        $title = "forgot password";
-        return view('auth.forgot-password',compact(
+    public function index()
+    {
+        $title = 'forgot password';
+
+        return view('auth.forgot-password', compact(
             'title'
         ));
     }
 
-    public function reset(Request $request){
-        $this->validate($request,[
-            'email'=>'required|email',
+    public function reset(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
         ]);
     }
 }

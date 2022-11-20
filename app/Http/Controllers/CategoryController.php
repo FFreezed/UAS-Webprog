@@ -14,10 +14,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $title = "categories";
+        $title = 'categories';
         $categories = Category::get();
-        return view('categories',compact(
-            'title','categories',
+
+        return view('categories', compact(
+            'title', 'categories',
         ));
     }
 
@@ -29,14 +30,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'name'=>'required|max:100',
+        $this->validate($request, [
+            'name' => 'required|max:100',
         ]);
         Category::create($request->all());
-        $notification=array(
-            'message'=>"Category has been added",
-            'alert-type'=>'success',
-        );
+        $notification = [
+            'message' => 'Category has been added',
+            'alert-type' => 'success',
+        ];
+
         return back()->with($notification);
     }
 
@@ -60,15 +62,16 @@ class CategoryController extends Controller
      */
     public function update(Request $request)
     {
-        $this->validate($request,['name'=>'required|max:100']);
+        $this->validate($request, ['name' => 'required|max:100']);
         $category = Category::find($request->id);
         $category->update([
-            'name'=>$request->name,
+            'name' => $request->name,
         ]);
-        $notification=array(
-            'message'=>"Category has been updated",
-            'alert-type'=>'success',
-        );
+        $notification = [
+            'message' => 'Category has been updated',
+            'alert-type' => 'success',
+        ];
+
         return back()->with($notification);
     }
 
@@ -82,10 +85,11 @@ class CategoryController extends Controller
     {
         $category = Category::find($request->id);
         $category->delete();
-        $notification=array(
-            'message'=>"Category has been deleted",
-            'alert-type'=>'success',
-        );
+        $notification = [
+            'message' => 'Category has been deleted',
+            'alert-type' => 'success',
+        ];
+
         return back()->with($notification);
     }
 }

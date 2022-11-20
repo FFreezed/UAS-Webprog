@@ -14,7 +14,7 @@ class ChangePurchasePriceDataTyp extends Migration
     public function up()
     {
         Schema::table('purchases', function (Blueprint $table) {
-            $table->decimal('price',15,2)->unsigned()->default(0)->change();
+            $table->decimal('price', 15, 2)->unsigned()->default(0)->change();
         });
     }
 

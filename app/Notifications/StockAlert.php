@@ -2,19 +2,16 @@
 
 namespace App\Notifications;
 
-use App\Models\Purchase;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Messages\BroadcastMessage;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class StockAlert extends Notification
 {
     use Queueable;
 
     private $data;
-
 
     /**
      * Create a new notification instance.
@@ -34,7 +31,7 @@ class StockAlert extends Notification
      */
     public function via($notifiable)
     {
-        return ['database','broadcast'];
+        return ['database', 'broadcast'];
     }
 
     /**
@@ -45,11 +42,12 @@ class StockAlert extends Notification
      */
     public function toMail($notifiable)
     {
-        $url = url(route('edit-purchase',$this->data->id));
+        $url = url(route('edit-purchase', $this->data->id));
+
         return (new MailMessage)
                     ->greeting('Hello!')
                     ->line('The Product below is running out of stock.')
-                    ->line("Product's name is ".$this->data->name ." is only ".$this->data->quantity." left in quantity")
+                    ->line("Product's name is ".$this->data->name.' is only '.$this->data->quantity.' left in quantity')
                     ->line("Please update the product's quantity or make a new purchase.")
                     ->action('View Product', $url)
                     ->line('Thank you!');
@@ -64,12 +62,11 @@ class StockAlert extends Notification
     public function toArray($notifiable)
     {
         return [
-            'product_name'=>$this->data->name,
-            'quantity'=>$this->data->quantity,
-            'image'=>$this->data->image,
+            'product_name' => $this->data->name,
+            'quantity' => $this->data->quantity,
+            'image' => $this->data->image,
         ];
     }
-
 
     /**
      * Get the broadcastable representation of the notification.
@@ -80,8 +77,8 @@ class StockAlert extends Notification
     public function toBroadcast($notifiable)
     {
         return new BroadcastMessage([
-            'product_name'=>$this->data->name,
-            'quantity'=>$this->data->quantity,
+            'product_name' => $this->data->name,
+            'quantity' => $this->data->quantity,
         ]);
     }
 }
