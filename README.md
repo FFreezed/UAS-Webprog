@@ -3,7 +3,7 @@
 # Fitur
 
 1. Produk
-2. PKategori Produk
+2. Kategori Produk
 3. Pembelian
 4. Penjualan
 5. Supplier
