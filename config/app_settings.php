@@ -20,7 +20,7 @@ return [
                     'style' => '', // any inline styles
                     'rules' => 'required|min:2|max:20', // validation rules for this input
                     'value' => config('app.name'), // any default value
-                    'hint' => 'You can set the app name here' // help block text for input
+                    'hint' => 'You can set the app name here', // help block text for input
                 ],
                 [
                     'name' => 'app_currency',
@@ -42,9 +42,8 @@ return [
                     'disk' => 'public', // which disk you want to upload
                     'path' => 'logos', // path on the disk,
                     'preview_class' => 'thumbnail',
-                    'preview_style' => 'height:40px'
-                ]
-                   ,
+                    'preview_style' => 'height:40px',
+                ],
                 [
                     'name' => 'favicon',
                     'type' => 'image',
@@ -54,9 +53,9 @@ return [
                     'disk' => 'public', // which disk you want to upload
                     'path' => 'logos', // path on the disk,
                     'preview_class' => 'thumbnail',
-                    'preview_style' => 'height:40px'
+                    'preview_style' => 'height:40px',
                 ],
-            ]
+            ],
         ],
         'email' => [
             'title' => 'Email Settings',
@@ -76,9 +75,9 @@ return [
                     'type' => 'text',
                     'label' => 'Email from Name',
                     'placeholder' => 'Email from Name',
-                ]
-            ]
-        ]
+                ],
+            ],
+        ],
     ],
 
     // Setting page url, will be used for get and post request
@@ -113,11 +112,11 @@ return [
     'remove_abandoned_settings' => false,
 
     // Controller to show and handle save setting
-    'controller' => '\App\Http\Controllers\SettingController',
+    'controller' => \App\Http\Controllers\SettingController::class,
 
     // settings group
-    'setting_group' => function() {
+    'setting_group' => function () {
         // return 'user_'.auth()->id();
         return 'default';
-    }
+    },
 ];

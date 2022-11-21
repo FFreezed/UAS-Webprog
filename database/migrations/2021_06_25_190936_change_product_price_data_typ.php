@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeProductPriceDataTyp extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class ChangeProductPriceDataTyp extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->decimal('price',15,2)->unsigned()->default(0)->change();
+            $table->decimal('price', 15, 2)->unsigned()->default(0)->change();
         });
     }
 
@@ -29,4 +29,4 @@ class ChangeProductPriceDataTyp extends Migration
             //
         });
     }
-}
+};

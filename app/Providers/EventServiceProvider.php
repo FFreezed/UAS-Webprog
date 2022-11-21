@@ -18,10 +18,10 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-        'App\Events\PurchaseOutStock'=>[
-            'App\Listeners\NotifyStockAlert',
+        \App\Events\PurchaseOutStock::class => [
+            \App\Listeners\NotifyStockAlert::class,
         ],
-        
+
     ];
 
     /**
@@ -35,5 +35,15 @@ class EventServiceProvider extends ServiceProvider
         //     $product = Product::where('quantity', '<=', 3)->first();
         //     auth()->user()->notify(new ProductAlert($product));
         // });
+    }
+
+    /**
+     * Determine if events and listeners should be automatically discovered.
+     *
+     * @return bool
+     */
+    public function shouldDiscoverEvents()
+    {
+        return false;
     }
 }
