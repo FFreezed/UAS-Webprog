@@ -1,11 +1,11 @@
-# Complete pharmacy management system
+# Stok manajemen Obat
 
-# Features
+# Fitur
 
-1. Products
-2. Product categories
-3. Purchases
-4. Sales
+1. Produk
+2. PKategori Produk
+3. Pembelian
+4. Penjualan
 5. Supplier
 6. Reports
 7. Access Control (roles and permissions)
