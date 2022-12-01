@@ -12,12 +12,10 @@
 	</div>
 	<!-- /Logo -->
 	
-	<a href="javascript:void(0);" id="toggle_btn">
+	{{-- <a href="javascript:void(0);" id="toggle_btn">
 		<i class="fe fe-text-align-left"></i>
-	</a>
-	
-	
-	
+	</a> --}}
+
 	<!-- Mobile Menu Toggle -->
 	<a class="mobile_btn" id="mobile_btn">
 		<i class="fa fa-bars"></i>
@@ -71,26 +69,30 @@
 		<!-- User Menu -->
 		<li class="nav-item dropdown has-arrow">
 			<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-				<span class="user-img"><img class="rounded-circle" src="@if(!empty(auth()->user()->avatar)){{asset('storage/users/'.auth()->user()->avatar)}}@endif" width="31" alt="avatar"></span>
+				<div class="user-img">
+					<p>
+						{{auth()->user()->name}}
+					</p>
+				</div>
 			</a>
 			<div class="dropdown-menu">
 				<div class="user-header">
-					<div class="avatar avatar-sm">
-						<img src="@if(!empty(auth()->user()->avatar)){{asset('storage/users/'.auth()->user()->avatar)}}@endif" alt="User Image" class="avatar-img rounded-circle">
-					</div>
 					<div class="user-text">
 						<h6>{{auth()->user()->name}}</h6>
 					</div>
+					{{-- <div class="avatar avatar-sm">
+						<img src="@if(!empty(auth()->user()->avatar)){{asset('storage/users/'.auth()->user()->avatar)}}@endif" alt="User Image" class="avatar-img rounded-circle">
+					</div> --}}
 				</div>
 				
 				<a class="dropdown-item" href="{{route('profile')}}">My Profile</a>
 				@can('view-settings')<a class="dropdown-item" href="{{route('settings')}}">Settings</a>@endcan
-				@can('backup-app')
+				{{-- @can('backup-app')
 				<a class="dropdown-item" href="{{route('backup-app')}}">Backup App</a>
 				@endcan
 				@can('backup-db')
 				<a class="dropdown-item" href="{{route('backup-db')}}">Backup Database</a>
-				@endcan
+				@endcan --}}
 				<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
 			</div>
 		</li>
