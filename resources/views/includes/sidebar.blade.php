@@ -4,9 +4,9 @@
         <div id="sidebar-menu" class="sidebar-menu">
 
             <ul>
-                <li class="menu-title">
+                {{-- <li class="menu-title">
                     <span>Main</span>
-                </li>
+                </li> --}}
                 <li class="{{ Request::routeIs('dashboard') ? 'active' : '' }}">
                     <a href="{{ route('dashboard') }}"><i class="fa-solid fa-house"></i> <span>Dashboard</span></a>
                 </li>

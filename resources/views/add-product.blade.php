@@ -44,20 +44,19 @@
 				
 				<div class="service-fields mb-3">
 					<div class="row">
-						<div class="col-lg-6">
+						<div class="col-lg-12">
 							<div class="form-group">
 								<label>Selling Price<span class="text-danger">*</span></label>
 								<input class="form-control" type="text" name="price" value="{{old('price')}}">
 							</div>
 						</div>
 
-						<div class="col-lg-6">
+						<div class="col-lg-6" style="display: none">
 							<div class="form-group">
 								<label>Discount (%)<span class="text-danger">*</span></label>
 								<input class="form-control" type="text" name="discount" value="0">
 							</div>
 						</div>
-						
 					</div>
 				</div>
 

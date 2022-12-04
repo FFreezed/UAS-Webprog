@@ -33,7 +33,7 @@
 								<th>Category</th>
 								<th>Price</th>
 								<th>Quantity</th>
-								<th>Discount</th>
+								{{-- <th>Discount</th> --}}
 								<th>Expiry Date</th>
 								<th class="action-btn">Action</th>
 							</tr>
@@ -57,7 +57,7 @@
 									<td>{{AppSettings::get('app_currency', '$')}} {{$product->price}}
 									</td>
 									<td>{{$product->purchase->quantity}}</td>
-									<td>{{$product->discount}}%</td>
+									{{-- <td>{{$product->discount}}%</td> --}}
 									<td>
 									{{date_format(date_create($product->purchase->expiry_date),"d M, Y")}}</span>										
 									</td>

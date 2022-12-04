@@ -21,15 +21,16 @@
             <div class="profile-header">
                 <div class="row align-items-center">
                     <div class="col-auto profile-image">
-                        <a href="#">
+                        {{-- <a href="#">
                             <img class="rounded-circle" alt="User Image"
                                 src="@if (!empty(auth()->user()->avatar)) {{ asset('storage/users/' . auth()->user()->avatar) }} @endif">
-                        </a>
+                        </a> --}}
                     </div>
                     <div class="col ml-md-n2 profile-user-info">
                         <h4 class="user-name mb-0">{{ auth()->user()->name }}</h4>
                         <h6 class="text-muted">{{ auth()->user()->email }}</h6>
-                        TimeZone: <h5>{{ date_default_timezone_set('Asia/Bangkok') }}</h5>
+                        <?php date_default_timezone_set('Asia/Bangkok'); ?>
+                        TimeZone: <h5><?php echo date_default_timezone_get() ?> </h5>
                         Current Date and Time: <h5>{{ date('d M, Y h:i:s a', time()) }}</h5>
                     </div>
 

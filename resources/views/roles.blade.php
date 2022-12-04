@@ -24,7 +24,7 @@
 <div class="row">
 	<div class="col-sm-12">
 		<div class="card">
-			<div class="card-body">
+			<div class="card-body col-12">
 				<div class="table-responsive">
 					<table id="roles-table" class="datatable table table-striped table-bordered table-hover table-center mb-0">
 						<thead>
@@ -47,7 +47,7 @@
 								</td>
 
 								<td class="text-center">
-									<div class="actions">
+									<div class="actions" id="role">
 										<a data-id="{{$role->id}}" data-role="{{$role->name}}" data-permissions="{{$role->getAllPermissions()}}" class="btn btn-sm bg-success-light editbtn" data-toggle="modal" href="javascript:void(0)">
 											<i class="fe fe-pencil"></i> Edit
 										</a>
@@ -133,7 +133,6 @@
 								</select>
 							</div>
 						</div>
-						
 					</div>
 					<button type="submit" class="btn btn-primary btn-block">Save Changes</button>
 				</form>
@@ -168,5 +167,4 @@
 			//
 		});
 	</script>
-	
 @endpush

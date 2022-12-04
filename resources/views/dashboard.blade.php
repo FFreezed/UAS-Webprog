@@ -98,7 +98,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 col-lg-6">
+        <div class="col-md-12 col-lg-8">
 
             <div class="card card-table">
                 <div class="card-header">
