@@ -33,8 +33,16 @@
 							<div class="form-group">
 								<label>Product <span class="text-danger">*</span></label>
 								<select class="select2 form-select form-control" name="product"> 
-									@foreach ($products as $product)
+									{{-- @foreach ($products as $product)
 										<option value="{{$product->id}}">{{$product->name}}</option>
+									@endforeach
+									--}}
+									@foreach ($products as $product)
+										@if (!empty($product->quantity))
+												<option value="{{$product->id}}">{{$product->name}}</option>
+											@else
+												<option value="{{$product->id}}" disabled>{{$product->name}} (Out of Stock)</option>
+										@endif
 									@endforeach
 								</select>
 							</div>

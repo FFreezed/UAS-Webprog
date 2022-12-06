@@ -41,13 +41,13 @@
 							<li class="notification-message">
 								<a href="{{route('read')}}">
 									<div class="media">
-										<span class="avatar avatar-sm">
+										{{-- <span class="avatar avatar-sm">
 											<img class="avatar-img rounded-circle" alt="Product image" src="{{asset('storage/purchases/'.$notification['image'])}}">
-										</span>
+										</span> --}}
 										<div class="media-body">
 											<h6 class="text-danger">Stock Alert</h6>
 											<p class="noti-details">
-												<span class="noti-title">{{$notification->data['product_name']}} is only {{$notification->data['quantity']}} left.</span>
+												<span class="noti-title">{{$notification->data['product']}} is only {{$notification->data['quantity']}} left.</span>
 												<span>Please update the purchase quantity </span>
 											</p>
 											

@@ -62,7 +62,7 @@ class StockAlert extends Notification
     public function toArray($notifiable)
     {
         return [
-            'product_name' => $this->data->name,
+            'product' => $this->data->name,
             'quantity' => $this->data->quantity,
             'image' => $this->data->image,
         ];
@@ -77,7 +77,7 @@ class StockAlert extends Notification
     public function toBroadcast($notifiable)
     {
         return new BroadcastMessage([
-            'product_name' => $this->data->name,
+            'product' => $this->data->name,
             'quantity' => $this->data->quantity,
         ]);
     }
