@@ -23,6 +23,9 @@
 
 {{-- <div class="text-center forgotpass"><a href="{{route('forgot-password')}}">Forgot Password?</a></div> --}}
 
-<div class="text-center dont-have">Don’t have an account? <a href="{{route('register')}}">Register</a></div>
+{{-- <div class="text-center dont-have">Don’t have an account? <a href="{{route('register')}}">Register</a></div> --}}
+
+{{-- div for back to route / --}}
+<div class="text-center dont-have"><a href="/">Back to Homepage</a></div>
 @endsection
 

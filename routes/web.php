@@ -17,6 +17,7 @@ use App\Http\Controllers\SalesController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', [HomePageController::class, 'index'])->name('homepage');
+// Route::get('/', function () {
+//     return view('homepage');
+// });
+Route::get('dokter', function () {
+    return view('dokter');
+});
 
 Route::middleware('guest')->group(function () {
     Route::get('login', [LoginController::class, 'index'])->name('login');
@@ -106,8 +115,4 @@ Route::middleware('auth')->group(function () {
 
     Route::get('backup', [BackupController::class, 'index'])->name('backup-app');
     Route::get('backup-app', [BackupController::class, 'database'])->name('backup-db');
-});
-
-Route::get('/', function () {
-    return redirect()->route('dashboard');
 });

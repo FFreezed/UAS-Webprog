@@ -48,41 +48,77 @@
     <div class="main-wrapper">
 
         <!-- Header -->
-        @include('includes.header')
-        <!-- /Header -->
+        <div class="header">
 
+            <!-- Logo -->
+            <div class="header-left">
+                <a href="/" class="logo">
+                    <img src="@if (!empty(AppSettings::get('logo'))) {{ asset('storage/' . AppSettings::get('logo')) }} @else{{ asset('assets/img/logo.png') }} @endif"
+                        alt="Logo">
+                </a>
+            </div>
+            <!-- /Logo -->
+
+        </div>
+        <!-- /Header -->
         <!-- Sidebar -->
-        @include('includes.sidebar')
+        {{-- @include('includes.sidebar') --}}
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="/"><i class="fa-solid fa-file"></i><span>List Obat</span></a>
+                        </li>
+                        <li>
+                            <a href="/dokter"><i class="fa-solid fa-user"></i> <span>Karyawan</span> </a>
+                        </li>
+                        {{-- li for login --}}
+                        <li>
+                            <a href="/dashboard"><i class="fa-solid fa-user"></i> <span>Login Admin</span> </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- /Sidebar -->
 
         <!-- Page Wrapper -->
         <div class="page-wrapper">
-
-            <div class="content container-fluid">
-
-                <!-- Page Header -->
-                <div class="page-header">
-                    <div class="row">
-                        @stack('page-header')
+            <!-- Products -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <h3>List Karyawan</h3>
+                        <table class="table table-hover table-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Jabatan</th>
+                                    <th>No.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tes</td>
+                                </tr>
+                                <tr>
+                                    <td>Tes2</td>
+                                </tr>
+                                <tr>
+                                    <td>Tes3</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <!-- /Page Header -->
-                @if ($errors->any())
-                    @foreach ($errors->all() as $error)
-                        <x-alerts.danger :error="$error" />
-                    @endforeach
-                @endif
-
-                @yield('content')
-
             </div>
+            <!-- /Products -->
         </div>
         <!-- /Page Wrapper -->
-
     </div>
     <!-- /Main Wrapper -->
-
-
 </body>
 <!-- jQuery -->
 <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
