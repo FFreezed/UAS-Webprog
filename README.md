@@ -177,9 +177,9 @@ Theme: https://themeforest.net/item/doccure-doctor-appointment-booking-system-bo
 
 # How to add product and sell It
 
-1 First add the category of product
+1. First add the category of product
 
-2 Add the product supplier
+2. Add the product supplier
 
 3. Make a purchase of the product by adding purchase.
 
