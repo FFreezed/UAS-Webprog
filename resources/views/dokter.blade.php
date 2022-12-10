@@ -86,39 +86,52 @@
 
         <!-- Page Wrapper -->
         <div class="page-wrapper">
-            <!-- Products -->
             <div class="card">
                 <div class="card-body">
+                    <h3>List Karyawan</h3>
+                    {{-- list for employee --}}
                     <div class="table-responsive">
-                        <h3>List Karyawan</h3>
-                        <table class="table table-hover table-center mb-0">
+                        <table class="table table-striped custom-table datatable">
                             <thead>
                                 <tr>
+                                    <th>Profesi</th>
                                     <th>Nama</th>
-                                    <th>Jabatan</th>
-                                    <th>No.</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Tes</td>
+                                    <td>
+                                        <h2 class="table-avatar">
+                                            <a href="#" class="avatar avatar-sm mr-2"><img
+                                                    class="avatar-img rounded-circle"
+                                                    src="assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"></a>
+                                            <a href="#">Bidan</a>
+                                        </h2>
+                                    </td>
+                                    <td>
+                                        Aam Amalia 
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Tes2</td>
-                                </tr>
-                                <tr>
-                                    <td>Tes3</td>
-                                </tr>
+                                    <td>
+                                        <h2 class="table-avatar">
+                                            <a href="#" class="avatar avatar-sm mr-2"><img
+                                                    class="avatar-img rounded-circle"
+                                                    src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image"></a>
+                                            <a href="#">ASisten Bidan</a>
+                                        </h2>
+                                    </td>
+                                    <td>
+                                        Windah Nina Agustina
+                                    </td>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <!-- /Products -->
+            <!-- /Page Wrapper -->
         </div>
-        <!-- /Page Wrapper -->
-    </div>
-    <!-- /Main Wrapper -->
+        <!-- /Main Wrapper -->
 </body>
 <!-- jQuery -->
 <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
