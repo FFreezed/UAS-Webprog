@@ -118,7 +118,7 @@
                                             <a href="#" class="avatar avatar-sm mr-2"><img
                                                     class="avatar-img rounded-circle"
                                                     src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image"></a>
-                                            <a href="#">ASisten Bidan</a>
+                                            <a href="#">Asisten Bidan</a>
                                         </h2>
                                     </td>
                                     <td>

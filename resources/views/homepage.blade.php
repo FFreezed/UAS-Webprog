@@ -90,7 +90,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <h3>Selamat Datang di Stok Obat Doccure!</h3>
-                        <table class="table table-hover table-center mb-0">
+                        <table class="table table-striped custom-table datatable">
                             <thead>
                                 <tr>
                                     <th>Product Name</th>
